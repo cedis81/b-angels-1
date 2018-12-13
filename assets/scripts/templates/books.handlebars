@@ -1,0 +1,14 @@
+{{#each books as books }}
+<div>
+    <section data-id="{{book.id}}">
+      <h1 data-id="{{book.id}}"> <small>Title: {{book.title}}</small></h1>
+      {{#if book.author}}
+        {{book.author}}
+        {{else}}
+        No author provided.
+        {{/if}}
+      <button class="btn btn-default delete-book">Remove Book</button>
+      <form class="btn btn-default update-book">Update Book</form>
+    </section>
+  </div>
+{{/each}}
